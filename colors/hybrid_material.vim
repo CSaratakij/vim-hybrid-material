@@ -1,8 +1,8 @@
 " File:       hybrid_material.vim
-" Maintainer: Kristijan Husak (kristijanhusak)
-" URL:        https://github.com/kristijanhusak/vim-hybrid-material
-" BASED ON:   https://github.com/w0ng/vim-hybrid
-" Modified:   16 Apr 2016
+" Maintainer: Chatchai Saratakij (CSaratakij)
+" URL:        https://github.com/CSaratakij/vim-hybrid-material
+" BASED ON:   https://github.com/kristijanhusak/vim-hybrid-material
+" Modified:   18 Apr 2019
 " License:    MIT
 
 " Description:"{{{
@@ -367,16 +367,17 @@ exe "hi! String"          .s:fg_green       .s:bg_none        .s:fmt_none
 "   Boolean"
 "   Float"
 
-exe "hi! Identifier"      .s:fg_red          .s:bg_none       .s:fmt_none
-exe "hi! Function"        .s:fg_yellow      .s:bg_none        .s:fg_bold
+exe "hi! Identifier"      .s:fg_none          .s:bg_none       .s:fmt_none
+exe "hi! Function"        .s:fg_green      .s:bg_none        .s:fg_bold
 
-exe "hi! Statement"       .s:fg_blue        .s:bg_none        .s:fg_bold
-"   Conditional"
-"   Repeat"
-"   Label"
-exe "hi! Operator"        .s:fg_aqua        .s:bg_none        .s:fmt_none
-"   Keyword"
-"   Exception"
+exe "hi! Statement"       .s:fg_orange        .s:bg_none        .s:fg_bold
+exe "hi! Conditional"       .s:fg_yellow        .s:bg_none        .s:fg_bold
+exe "hi! Repeat"       .s:fg_yellow        .s:bg_none        .s:fg_bold
+exe "hi! Label"       .s:fg_yellow        .s:bg_none        .s:fg_bold
+
+exe "hi! Operator"        .s:fg_none        .s:bg_none        .s:fmt_none
+exe "hi! Keyword"        .s:fg_purple        .s:bg_none        .s:fmt_none
+exe "hi! Exception"        .s:fg_purple        .s:bg_none        .s:fmt_none
 
 exe "hi! PreProc"         .s:fg_aqua        .s:bg_none        .s:fg_bold
 "   Include"
@@ -384,11 +385,11 @@ exe "hi! PreProc"         .s:fg_aqua        .s:bg_none        .s:fg_bold
 "   Macro"
 "   PreCondit"
 
-exe "hi! Type"            .s:fg_orange      .s:bg_none        .s:fg_bold
-"   StorageClass"
-exe "hi! Structure"       .s:fg_aqua        .s:bg_none        .s:fmt_none
-"   Typedef"
+exe "hi! Type"            .s:fg_blue      .s:bg_none        .s:fg_bold
+exe "hi! StorageClass"    .s:fg_orange      .s:bg_none        .s:fg_bold
 
+exe "hi! Structure"       .s:fg_orange        .s:bg_none        .s:fg_bold
+exe "hi! Typedef"       .s:fg_orange        .s:bg_none        .s:fmt_bold
 exe "hi! Special"         .s:fg_red         .s:bg_none        .s:fmt_none
 "   SpecialChar"
 "   Tag"
@@ -396,12 +397,9 @@ exe "hi! Special"         .s:fg_red         .s:bg_none        .s:fmt_none
 "   SpecialComment"
 "   Debug"
 "
-exe "hi! Underlined"      .s:fg_blue        .s:bg_none        .s:fmt_none
-
+exe "hi! Underlined"      .s:fg_none        .s:bg_none        .s:fmt_none
 exe "hi! Ignore"          .s:fg_none        .s:bg_none        .s:fmt_none
-
 exe "hi! Error"           .s:fg_red         .s:bg_none        .s:fmt_none
-
 exe "hi! Todo"            .s:fg_addfg       .s:bg_none        .s:fg_bold
 
 " Quickfix window highlighting
